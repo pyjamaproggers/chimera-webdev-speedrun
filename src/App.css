@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.grandparent {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    justify-content: center;
+  }
+      
+  .parent {
+    height: 100vh;
+    white-space: nowrap;
+  }
+      
+  .child {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    margin-right: 30px;
+  }
+  
