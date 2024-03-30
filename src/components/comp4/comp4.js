@@ -57,8 +57,9 @@ function Comp4() {
                     fontWeight: '$bold',
                     backgroundColor: 'white', 
                     lineHeight: '1em', 
-                    padding: '0 100px', 
+                    padding: '0 20px', 
                     zIndex: 2, 
+                    marginLeft:"42%",
                     "&:before, &:after": { 
                         content: '""',
                         position: 'absolute',
