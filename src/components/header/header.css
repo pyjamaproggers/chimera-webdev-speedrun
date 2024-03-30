@@ -35,6 +35,10 @@
   overflow: hidden;
 }
 
+.navbar-heading-text:hover{
+    cursor: pointer;
+}
+
 .navbar-menu {
   display: flex;
   flex-direction: column;
