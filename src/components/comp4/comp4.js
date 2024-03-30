@@ -55,22 +55,29 @@ function Comp4() {
                     textAlign: 'center',
                     fontSize: '$3xl',
                     fontWeight: '$bold',
-                    backgroundColor: 'white', // Set this to match the container's background
-                    lineHeight: '1em', // Adjust line height to control the vertical position of the text
-                    padding: '0 300px', // Add horizontal padding to ensure the background extends beyond the text
-                    zIndex: 5, // Ensure the text layer is above any potentially conflicting elements
-                    "&:before": { // Create a pseudo-element for the border
+                    backgroundColor: 'white', 
+                    lineHeight: '1em', 
+                    padding: '0 100px', 
+                    zIndex: 2, 
+                    "&:before, &:after": { 
                         content: '""',
                         position: 'absolute',
+                        height: '1px',
+                        backgroundColor: 'black',
+                        textAlign: 'center',
                         top: '50%',
-                        left: '0',
-                        right: '0',
-                        borderTop: '1px solid black',
-                        zIndex: -5, // Place the border behind the text
+                        width: '100%',
+                    },
+                    "&:before": {
+                        right: '100%',
+                    },
+                    "&:after": {
+                        left: '100%',
                     }
                 }}>
                     Lorem
                 </Text>
+
 
 
                 <Row css={{
