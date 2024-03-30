@@ -2,6 +2,7 @@
   height: 100vh;
   width: 72px;
   background-color: white;
+  z-index: 50;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

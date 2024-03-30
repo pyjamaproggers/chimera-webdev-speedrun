@@ -42,29 +42,42 @@ function App() {
 
     useEffect(() => {
         const horizontalScroll = (e) => {
-            e.preventDefault(); 
-            const parentElement = document.querySelector('.parent'); 
+            e.preventDefault();
+            const parentElement = document.querySelector('.parent');
             if (parentElement) {
-                parentElement.scrollLeft += e.deltaY * 15; 
+                parentElement.scrollLeft += e.deltaY * 50;
             }
         };
-    
-        window.addEventListener('wheel', horizontalScroll, { passive: false }); 
-    
-        return () => window.removeEventListener('wheel', horizontalScroll); 
+
+        window.addEventListener('wheel', horizontalScroll, { passive: false });
+
+        return () => window.removeEventListener('wheel', horizontalScroll);
     }, []);
-    
+
+    const scrollRef = useRef(null);
+
+    const handleWheel = (event) => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollLeft -= event.deltaY * 30;
+            event.preventDefault();
+        }
+    };
+
 
     return (
         <>
             <div className={`cursor-follower ${isPointer ? 'pointer' : ''}`} style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}></div>
-            <div className="grandparent" ref={parentRef}> {/* Attach the ref here */}
-                <div className="parent">
-                    <Header />
-                    <Comp1 />
-                    <Comp2 />
-                    <Comp3 />
-                    <Comp4 />
+            <div ref={scrollRef} onWheel={handleWheel}>
+                <div className="grandparent" 
+                ref={parentRef}
+                >
+                    <div className="parent">
+                        <Header />
+                        <Comp1 />
+                        <Comp2 />
+                        <Comp3 />
+                        <Comp4 />
+                    </div>
                 </div>
             </div>
         </>

@@ -18,7 +18,7 @@ function Comp2() {
             <div className="right-aligned-content">
                 <p className="right-aligned-text">Lorem ipsum sit amet</p>
                 <button className="rounded-button" onClick={handleButtonClick}>
-                    <span>Lorem Ipsum <MdArrowOutward size={24} color="black" className="menu-navbar-bottomicon" /></span>
+                    <span style={{alignItems: 'center'}}>Lorem Ipsum <MdArrowOutward size={24} color="black" className="menu-navbar-bottomicon" /></span>
                 </button>
             </div>
         </div>

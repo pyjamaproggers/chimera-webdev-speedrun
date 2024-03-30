@@ -36,4 +36,9 @@
   .component4 .arrow {
     font-size: 1.5em;
   }
+
+  .comp4-maintext:hover{
+    color: 'rgb(255, 143, 0)' !important;
+    cursor: pointer;
+  }
   
