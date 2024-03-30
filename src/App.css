@@ -11,7 +11,9 @@
   flex-direction: row;
   overflow-x: auto; 
   overflow-y: hidden; 
+  scroll-behavior: smooth;
 }
+
 
 .parent > div {
   flex-shrink: 0; 
