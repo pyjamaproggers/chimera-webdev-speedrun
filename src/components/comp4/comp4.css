@@ -1,0 +1,39 @@
+.component4 {
+    text-align: left;
+    width: 100vw;
+    margin: 20px auto;
+  }
+  
+  .component4 h1.extremely-large {
+    font-size: 5em;
+    margin: 20px 0;
+    font-family: 'DM Serif Display', serif;
+  }
+  
+  .component4 .with-line {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .component4 .with-line::before,
+  .component4 .with-line::after {
+    content: '';
+    flex: 1;
+    height: 2px; 
+    background-color: black; 
+    margin: 0 20px; 
+  }
+  
+  .component4 .with-arrows {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .component4 .arrow {
+    font-size: 1.5em;
+  }
+  

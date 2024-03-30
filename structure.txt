@@ -1,6 +1,24 @@
 Lorem, ipsum dolor - (small text black color)
 Lorem (Orange color font Large)
 Ipsum (Orange color font Large)
-Lorem          Lorem ipsum dolor sit.
+Lorem          Lorem ipsum dolor sit. ("Lorem" below the beginning of of Ipsum and "Lorem ipsum dolor sit." at the end of Ipsum)
 
         Scroll to see more
+
+
+Lorem Ipsum dolor
+
+Lorem Ipsum dolor paragraph Lorem Ipsum dolor paragraph Lorem Ipsum dolor paragraph
+Lorem Ipsum dolor paragraph Lorem Ipsum dolor paragraph Lorem Ipsum dolor paragraph
+Lorem Ipsum dolor paragraph Lorem Ipsum dolor paragraph Lorem Ipsum dolor paragraph
+                                                        Lorem Ipsum
+                                                                    Rounded Button
+
+
+Lorum
+    Ipsum
+        (Right Arrow) Lorem                  
+        (Right Arrow) Ipsum
+        (Right Arrow) Dolor
+
+

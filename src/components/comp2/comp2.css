@@ -1,0 +1,60 @@
+.component2 {
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+    width: 100vw;
+    margin: 10%;
+  }
+
+  .component2content{
+    width: 70%;
+  }
+  
+  .component2 h4, .component2 p {
+    margin-bottom: 20px;
+    white-space: normal; /* Corrected property for wrapping text */
+  }
+  
+  .right-aligned-content {
+    text-align: right;
+  }
+  
+  .right-aligned-text {
+    margin-bottom: 20px;
+  }
+  
+  .rounded-button {
+    position: relative; 
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    overflow: hidden; 
+    transition: color 0.3s; 
+  }
+  
+  .rounded-button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top right, grey, grey); 
+    z-index: 0;
+    transition: transform 0.3s;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+  }
+  
+  .rounded-button:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .rounded-button span {
+    position: relative;
+    z-index: 1;
+  }
+  
