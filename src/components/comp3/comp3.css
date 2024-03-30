@@ -1,0 +1,24 @@
+.component3 .content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .header-inline h2, .header-inline h3 {
+    display: inline; 
+    margin-right: 5px; 
+  }
+  
+  .with-lines p {
+    border-bottom: 1px solid #ccc; /* Adds a line below each paragraph */
+    padding-bottom: 5px; /* Adds some padding below the text */
+  }
+  
+  .indent {
+    padding-left: 20px;
+  }
+  
+  .arrow {
+    margin-right: 5px;
+  }
+  
