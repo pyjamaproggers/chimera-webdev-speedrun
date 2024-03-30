@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Grey from './assets/Grey.jpeg'
 import Comp1 from './components/comp1/comp1';
 import Comp2 from './components/comp2/comp2';
@@ -13,6 +13,13 @@ import Header from './components/header/header';
 AOS.init();
 
 function App() {
+
+    // useEffect(()=>{
+    //     document.body.mousewheel(function(event, delta) {
+    //         this.scrollLeft -= (delta * 30)
+    //         event.preventDefault()
+    //         })
+    // })
 
     return (
         <>
