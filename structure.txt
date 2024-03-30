@@ -22,3 +22,10 @@ Lorum
         (Right Arrow) Dolor
 
 
+Lorem ipsum dolor sit
+     LoremIpsum (EXTREMELY LARGE FONT SIZE COMPARED TO REST)
+ -------Lorem-------
+ Lorem (arrow) Ipsum (arrow) Dolor (arrow)
+
+
+

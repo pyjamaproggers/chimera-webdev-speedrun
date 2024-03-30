@@ -8,6 +8,18 @@ export default function Header() {
 
     const [showNavbarMenu, setShowNavbarMenu] = useState(false)
 
+    const handleRandomChadGeneratorClick = async () => {
+        try {
+            const response = await fetch('https://chimera-webdev-speedrun-backend.onrender.com/randomchadgenerator');
+            if (!response.ok) throw new Error('Network response was not ok');
+            const link = await response.text();
+
+            window.open(link, '_blank');
+        } catch (error) {
+            console.error('Failed to fetch the random Chad link:', error);
+        }
+    };
+
     return (
         <>
             <div className="navbar">
@@ -69,8 +81,8 @@ export default function Header() {
                         <h1 className="text-white navbar-menu-item" data-text="Home">
                             Home
                         </h1>
-                        <h1 className="text-white navbar-menu-item" data-text="Lorem">
-                            Lorem
+                        <h1 onClick={handleRandomChadGeneratorClick} className="text-white navbar-menu-item" data-text="Random Chad Generator">
+                            Random Chad Generator
                         </h1>
                         <h1 className="text-white navbar-menu-item" data-text="Ipsum">
                             Ipsum
