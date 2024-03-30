@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import React from 'react';
 import Grey from './assets/Grey.jpeg'
 import Comp1 from './components/comp1/comp1';
 import Comp2 from './components/comp2/comp2';
@@ -9,13 +8,45 @@ import Comp4 from './components/comp4/comp4';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Header from './components/header/header';
+import React, { useState, useEffect } from 'react';
 
 AOS.init();
 
 function App() {
 
+    const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
+
+  useEffect(() => {
+    let frameId;
+
+    const moveCursor = (e) => {
+      const moveCircle = () => {
+        setCursorPos((prevPos) => {
+          const distanceX = e.clientX - prevPos.x;
+          const distanceY = e.clientY - prevPos.y;
+
+          return {
+            x: prevPos.x + distanceX * 0.1,
+            y: prevPos.y + distanceY * 0.1,
+          };
+        });
+
+        frameId = requestAnimationFrame(moveCircle);
+      };
+
+      moveCircle();
+    };
+
+    window.addEventListener('mousemove', moveCursor);
+
+    return () => {
+      window.removeEventListener('mousemove', moveCursor);
+      cancelAnimationFrame(frameId);
+    };
+  }, []);
     return (
         <>
+        <div className="cursor-follower" style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}></div>
             <div className="grandparent">
                 <div className="parent">
                     <Header />

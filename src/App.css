@@ -16,3 +16,16 @@
 .parent > div {
   flex-shrink: 0; 
 }
+
+.cursor-follower {
+  position: fixed;
+  width: 10px; 
+  height: 10px;
+  border-radius: 50%;
+  background-color: orange;
+  pointer-events: none; 
+  transform: translate(-50%, -50%);
+  z-index: 1000; 
+  transition: transform 0.2s ease-out; 
+}
+
