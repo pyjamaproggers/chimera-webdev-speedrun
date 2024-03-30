@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './App.css';
 import Comp1 from './components/comp1/comp1';
 import Comp2 from './components/comp2/comp2';
@@ -13,6 +13,7 @@ AOS.init();
 function App() {
     const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
     const [isPointer, setIsPointer] = useState(false);
+    const parentRef = useRef(null); // Add a ref to your parent container
 
     useEffect(() => {
         const moveCursor = (e) => {
@@ -42,21 +43,22 @@ function App() {
     useEffect(() => {
         const horizontalScroll = (e) => {
             e.preventDefault(); 
-            window.scrollBy({
-                left: e.deltaY * 1.5, 
-                behavior: 'smooth' 
-            });
+            const parentElement = document.querySelector('.parent'); 
+            if (parentElement) {
+                parentElement.scrollLeft += e.deltaY * 15; 
+            }
         };
-
-        window.addEventListener('wheel', horizontalScroll);
-
-        // return () => window.removeEventListener('wheel', horizontalScroll);
+    
+        window.addEventListener('wheel', horizontalScroll, { passive: false }); 
+    
+        return () => window.removeEventListener('wheel', horizontalScroll); 
     }, []);
+    
 
     return (
         <>
             <div className={`cursor-follower ${isPointer ? 'pointer' : ''}`} style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}></div>
-            <div className="grandparent">
+            <div className="grandparent" ref={parentRef}> {/* Attach the ref here */}
                 <div className="parent">
                     <Header />
                     <Comp1 />
