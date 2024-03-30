@@ -1,22 +1,44 @@
 .grandparent {
-  height: 100vh; 
-  overflow-y: auto; 
-  position: -webkit-sticky; 
+  height: 100vh;
+  overflow-y: auto;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
+}
+
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+body,
+html {
+  font-family: "libre-baskerville", serif;
 }
 
 .parent {
   display: flex;
   flex-direction: row;
-  overflow-x: auto; 
-  overflow-y: hidden; 
+  overflow-x: auto;
+  overflow-y: hidden;
   scroll-behavior: smooth;
 }
 
-
 .parent > div {
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
 
 .cursor-follower {
@@ -28,13 +50,13 @@
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 1000;
-  transition: transform 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out, opacity 0.2s ease-out;
+  transition: transform 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out,
+    opacity 0.2s ease-out;
   opacity: 1; /* Default opacity */
 }
 
 .cursor-follower.pointer {
-  width: 100px; 
+  width: 100px;
   height: 100px;
-  opacity: 0.7; 
+  opacity: 0.7;
 }
-

@@ -31,7 +31,7 @@ function Comp4() {
                 </Text>
 
                 <Text css={{
-                    fontSize: '$8xl',
+                    fontSize: '8rem',
                     fontWeight: '$bold',
                     lineHeight: '1',
                     fontStyle: 'italic',
@@ -45,20 +45,33 @@ function Comp4() {
                         color: '#ff8f00'
                     }}>
                         Ipsum
-                        </span>
-                        
+                    </span>
+
                 </Text>
 
                 <Text css={{
-                    borderStyle: 'solid',
-                    borderWidth: '1px 0px 0px 0px',
-                    borderColor: 'black',
+                    position: 'relative',
+                    display: 'inline-block',
                     textAlign: 'center',
                     fontSize: '$3xl',
-                    fontWeight: '$bold'
+                    fontWeight: '$bold',
+                    backgroundColor: 'white', // Set this to match the container's background
+                    lineHeight: '1em', // Adjust line height to control the vertical position of the text
+                    padding: '0 300px', // Add horizontal padding to ensure the background extends beyond the text
+                    zIndex: 5, // Ensure the text layer is above any potentially conflicting elements
+                    "&:before": { // Create a pseudo-element for the border
+                        content: '""',
+                        position: 'absolute',
+                        top: '50%',
+                        left: '0',
+                        right: '0',
+                        borderTop: '1px solid black',
+                        zIndex: -5, // Place the border behind the text
+                    }
                 }}>
                     Lorem
                 </Text>
+
 
                 <Row css={{
                     alignItems: 'center',
@@ -68,7 +81,7 @@ function Comp4() {
                     <Text css={{
                         fontSize: '$xl',
                         fontWeight: '$semibold',
-                        '&:hover':{
+                        '&:hover': {
                             cursor: 'pointer',
                             textDecoration: 'underline',
                             textDecorationColor: 'orange'
@@ -81,7 +94,7 @@ function Comp4() {
                     <Text css={{
                         fontSize: '$xl',
                         fontWeight: '$semibold',
-                        '&:hover':{
+                        '&:hover': {
                             cursor: 'pointer',
                             textDecoration: 'underline',
                             textDecorationColor: 'orange'
@@ -93,7 +106,7 @@ function Comp4() {
                     <Text css={{
                         fontSize: '$xl',
                         fontWeight: '$semibold',
-                        '&:hover':{
+                        '&:hover': {
                             cursor: 'pointer',
                             textDecoration: 'underline',
                             textDecorationColor: 'orange'
