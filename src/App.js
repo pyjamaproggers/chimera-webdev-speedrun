@@ -45,7 +45,7 @@ function App() {
             e.preventDefault(); 
             const parentElement = document.querySelector('.parent'); 
             if (parentElement) {
-                parentElement.scrollLeft += e.deltaY * 20; 
+                parentElement.scrollLeft += e.deltaY * 15; 
             }
         };
     
