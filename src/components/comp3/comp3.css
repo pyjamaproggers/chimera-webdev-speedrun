@@ -1,13 +1,17 @@
-.component3 .content {
+.component3{
     margin: 0 auto;
     text-align: left;
     width: 100vw;
+  }
+  .content{
+    width: 80%;
   }
   
   .header-inline h2, .header-inline h3 {
     display: inline; 
     margin-right: 5px; 
     font-family: 'DM Serif Display', serif; 
+    font-size: 8em;
   }
   
   .with-lines p {

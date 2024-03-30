@@ -6,11 +6,13 @@
   align-items: center;
   text-align: center;
   width: 100vw;
+  height: 98vh;
 }
 
 .text-section {
   margin-bottom: 20px;
 }
+
 
 .small-text {
   color: black;
@@ -19,7 +21,7 @@
 }
 
 .large-text {
-  font-size: 8rem; 
+  font-size: 9em; 
   font-weight: bold; 
   display: block; 
   color: orange; 
