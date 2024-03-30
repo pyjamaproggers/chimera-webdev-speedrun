@@ -11,7 +11,7 @@ function Comp2() {
         <div className="component2">
             <div className='component2content'>
                 <h4 data-aos="fade-down" style={{fontSize: '20px', maringBottom: '24px'}}>Lorem Ipsum</h4>
-                <p style={{ marginBottom: '60px', fontSize: '20px', maxWidth: '40px' }}>
+                <p style={{ marginBottom: '30px', fontSize: '20px', maxWidth: '40px' }}>
                     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀
                     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣶⣿⣿⣿⣿⣿⣄⠀⠀⠀⠀⠀
                     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⠿⠟⠛⠻⣿⠆⠀⠀⠀⠀
