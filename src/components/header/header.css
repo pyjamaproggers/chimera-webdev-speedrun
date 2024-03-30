@@ -1,0 +1,123 @@
+.navbar {
+  height: 100vh;
+  width: 72px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  border-style: solid;
+  border-color: black;
+  border-width: 0px 1px 0px 0px;
+  box-shadow: 1px 0px gray;
+}
+
+.rotate270 {
+  transform: rotateZ(270deg);
+}
+
+.navbar-heading-row {
+  display: flex;
+  flex-direction: column;
+  /* width: max-content; */
+  max-width: 84px;
+  justify-content: center;
+  align-items: center;
+  margin: 16px;
+}
+
+.navbar-heading-text {
+  display: flex;
+  line-height: 1.1;
+  width: 120px;
+  overflow: hidden;
+}
+
+.navbar-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: start;
+  background-color: #0c0c0c;
+}
+
+.text-white {
+  color: white;
+}
+
+.navbar-menu-toprow {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  width: 100%;
+  align-items: center;
+}
+
+.navbar-menu-items {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-menu-item {
+  font-size: 8rem;
+  margin: 8px;
+  line-height: 1;
+}
+
+.navbar-menu-toptext {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar-menu-item:hover {
+  cursor: pointer;
+}
+
+.navbar-menu-bottom-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 8px 8px;
+}
+
+.navbar-menu-bottomlinks {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-menu-bottomlinks:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.navbar-menu-bottomlinks:hover .menu-navbar-bottomicon1 {
+  transition: transform 0.25s;
+  transform: rotateZ(45deg);
+}
+
+.navbar-menu-item::before {
+  /* This will create the layer 
+       over original text*/
+  content: attr(data-text);
+  position: absolute;
+  z-index: 1;
+  color: orange;
+  overflow: hidden;
+  /* Setting width as 0*/
+  height: 0%;
+  transition: 1.5s;
+}
+
+.navbar-menu-item:hover::before {
+  /* Setting width to 100 on hover*/
+  height: 100%;
+}

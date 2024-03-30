@@ -3,6 +3,10 @@ import './App.css';
 import React from 'react';
 import Grey from './assets/Grey.jpeg'
 import Header from './components/header/header';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 function App() {
 
