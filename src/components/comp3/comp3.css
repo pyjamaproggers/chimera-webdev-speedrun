@@ -1,7 +1,7 @@
 .component3 .content {
-    max-width: 600px;
     margin: 0 auto;
     text-align: left;
+    width: 100vw;
   }
   
   .header-inline h2, .header-inline h3 {
