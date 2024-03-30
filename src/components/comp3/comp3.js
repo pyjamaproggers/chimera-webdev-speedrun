@@ -15,15 +15,15 @@ function Comp3() {
     <div className="component3">
       <div className="content">
         <div className="header-inline">
-          <h2 ref={lorumRef}>Lorum</h2>
-          <div style={{ marginLeft: `${lorumWidth}px` }}>
+          <h2 ref={lorumRef} style={{color: 'orange', lineHeight: '1'}}>Lorum</h2>
+          <div style={{ marginLeft: `${lorumWidth}px`, color: 'orange', lineHeight: '1' }}>
             <h2>Ipsum</h2>
           </div>
         </div>
         <div className="indent with-lines">
-          <p><span className="arrow">{'>'}</span> Row1</p>
-          <p><span className="arrow">{'>'}</span> Row2</p>
-          <p><span className="arrow">{'>'}</span> Row3</p>
+          <div className='each-row'>
+            <span></span>
+          </div>
         </div>
       </div>
     </div>

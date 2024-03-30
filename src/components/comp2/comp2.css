@@ -28,8 +28,8 @@
     padding: 10px 20px;
     border-radius: 20px;
     border: 2px solid black;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     cursor: pointer;
     overflow: hidden; 
     transition: color 0.3s; 
@@ -42,7 +42,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top right, grey, grey); 
+    background: linear-gradient(to top right, rgb(204, 204, 204), rgb(204,204,204)); 
     z-index: 0;
     transition: transform 0.3s;
     transform: scaleX(0);

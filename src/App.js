@@ -45,14 +45,14 @@ function App() {
         };
     }, []);
 
-    useEffect(() => {
-        window.document.ready(function () {
-            document.getElementsByTagName("BODY")[0].mousewheel(function (e, delta) {
-                this.scrollLeft -= (delta);
-                e.preventDefault();
-            });
-        });
-    }, [])
+    // useEffect(() => {
+    //     window.document.ready(function () {
+    //         document.getElementsByTagName("BODY")[0].mousewheel(function (e, delta) {
+    //             this.scrollLeft -= (delta);
+    //             e.preventDefault();
+    //         });
+    //     });
+    // }, [])
 
     return (
         <>

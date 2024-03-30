@@ -2,6 +2,9 @@
     margin: 0 auto;
     text-align: left;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .content{
     width: 80%;
@@ -15,12 +18,12 @@
   }
   
   .with-lines p {
-    border-bottom: 1px solid #ccc; /* Adds a line below each paragraph */
-    padding-bottom: 5px; /* Adds some padding below the text */
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 5px;
   }
   
   .indent {
-    padding-left: 20px;
+    margin-left: 200px;
   }
   
   .arrow {
