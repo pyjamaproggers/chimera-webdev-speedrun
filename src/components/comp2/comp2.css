@@ -5,6 +5,10 @@
     width: 100vw;
     margin: 10%;
   }
+
+  .component2content{
+    width: 70%;
+  }
   
   .component2 h4, .component2 p {
     margin-bottom: 20px;
