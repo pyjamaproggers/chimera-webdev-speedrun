@@ -42,16 +42,16 @@ function App() {
 
     useEffect(() => {
         const horizontalScroll = (e) => {
-            e.preventDefault(); // Prevent default scrolling behavior.
-            const parentElement = document.querySelector('.parent'); // Directly target the .parent element
+            e.preventDefault(); 
+            const parentElement = document.querySelector('.parent'); 
             if (parentElement) {
-                parentElement.scrollLeft += e.deltaY * 20; // Translate vertical scroll into horizontal
+                parentElement.scrollLeft += e.deltaY * 20; 
             }
         };
     
-        window.addEventListener('wheel', horizontalScroll, { passive: false }); // Listen for scroll events on the window
+        window.addEventListener('wheel', horizontalScroll, { passive: false }); 
     
-        return () => window.removeEventListener('wheel', horizontalScroll); // Clean up event listener
+        return () => window.removeEventListener('wheel', horizontalScroll); 
     }, []);
     
 
