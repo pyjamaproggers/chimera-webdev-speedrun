@@ -45,7 +45,7 @@ function App() {
             e.preventDefault(); // Prevent default scrolling behavior.
             const parentElement = document.querySelector('.parent'); // Directly target the .parent element
             if (parentElement) {
-                parentElement.scrollLeft += e.deltaY * 1.5; // Translate vertical scroll into horizontal
+                parentElement.scrollLeft += e.deltaY * 20; // Translate vertical scroll into horizontal
             }
         };
     
