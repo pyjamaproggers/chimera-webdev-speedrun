@@ -19,13 +19,20 @@
 
 .cursor-follower {
   position: fixed;
-  width: 10px; 
+  width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: orange;
-  pointer-events: none; 
+  pointer-events: none;
   transform: translate(-50%, -50%);
-  z-index: 1000; 
-  transition: transform 0.2s ease-out; 
+  z-index: 1000;
+  transition: transform 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out, opacity 0.2s ease-out;
+  opacity: 1; /* Default opacity */
+}
+
+.cursor-follower.pointer {
+  width: 100px; 
+  height: 100px;
+  opacity: 0.7; 
 }
 
