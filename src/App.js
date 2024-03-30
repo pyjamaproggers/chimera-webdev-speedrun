@@ -1,7 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
 import React, { useEffect, useState } from 'react';
-import Grey from './assets/Grey.jpeg'
+import './App.css';
 import Comp1 from './components/comp1/comp1';
 import Comp2 from './components/comp2/comp2';
 import Comp3 from './components/comp3/comp3';
@@ -13,27 +11,24 @@ import Header from './components/header/header';
 AOS.init();
 
 function App() {
-
     const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
+    const [isPointer, setIsPointer] = useState(false);
 
     useEffect(() => {
-        let frameId;
-
         const moveCursor = (e) => {
+            const cursorStyle = window.getComputedStyle(e.target).cursor;
+            setIsPointer(cursorStyle === 'pointer');
+
             const moveCircle = () => {
                 setCursorPos((prevPos) => {
                     const distanceX = e.clientX - prevPos.x;
                     const distanceY = e.clientY - prevPos.y;
-
                     return {
                         x: prevPos.x + distanceX * 0.1,
                         y: prevPos.y + distanceY * 0.1,
                     };
                 });
-
-                frameId = requestAnimationFrame(moveCircle);
             };
-
             moveCircle();
         };
 
@@ -41,22 +36,26 @@ function App() {
 
         return () => {
             window.removeEventListener('mousemove', moveCursor);
-            cancelAnimationFrame(frameId);
         };
     }, []);
 
     useEffect(() => {
-        window.document.ready(function () {
-            document.getElementsByTagName("BODY")[0].mousewheel(function (e, delta) {
-                this.scrollLeft -= (delta);
-                e.preventDefault();
+        const horizontalScroll = (e) => {
+            e.preventDefault(); 
+            window.scrollBy({
+                left: e.deltaY * 1.5, 
+                behavior: 'smooth' 
             });
-        });
-    }, [])
+        };
+
+        window.addEventListener('wheel', horizontalScroll);
+
+        // return () => window.removeEventListener('wheel', horizontalScroll);
+    }, []);
 
     return (
         <>
-            <div className="cursor-follower" style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}></div>
+            <div className={`cursor-follower ${isPointer ? 'pointer' : ''}`} style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}></div>
             <div className="grandparent">
                 <div className="parent">
                     <Header />
