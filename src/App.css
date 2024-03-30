@@ -11,10 +11,8 @@
   flex-direction: row;
   overflow-x: auto; 
   overflow-y: hidden; 
-  white-space: nowrap; 
 }
 
 .parent > div {
-  min-width: 300px; 
   flex-shrink: 0; 
 }

@@ -6,8 +6,8 @@ function Comp1() {
     <div className="component1">
       <div className='text-section'>
         <p className='small-text'>Lorem, ipsum dolor</p>
-        <p className='large-text orange-text'>Lorem</p>
-        <p className='large-text orange-text'>Ipsum</p>
+        <p className='large-text orange-text' data-aos="fade-up">Lorem</p>
+        <p className='large-text orange-text' data-aos="fade-up">Ipsum</p>
         <div className='aligned-texts'>
           <span className='small-text'>Lorem</span>
           <span className='end-text'>Lorem ipsum dolor sit.</span>

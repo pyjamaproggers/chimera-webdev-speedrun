@@ -83,17 +83,17 @@ export default function Header() {
                     <div className="navbar-menu-bottomlinks">
                         <div className="navbar-menu-bottom-item">
                             <span className="text-white">Lorem</span>
-                            <MdArrowOutward size={24} color="white" className="menu-navbar-bottomicon1" />
+                            <MdArrowOutward size={24} color="white" className="menu-navbar-bottomicon" />
                         </div>
 
                         <div className="navbar-menu-bottom-item">
                             <span className="text-white">Ipsum</span>
-                            <MdArrowOutward size={24} color="white" className="menu-navbar-bottomicon2" />
+                            <MdArrowOutward size={24} color="white" className="menu-navbar-bottomicon" />
                         </div>
 
                         <div className="navbar-menu-bottom-item">
                             <span className="text-white">Data</span>
-                            <MdArrowOutward size={24} color="white" className="menu-navbar-bottomicon3" />
+                            <MdArrowOutward size={24} color="white" className="menu-navbar-bottomicon" />
                         </div>
                     </div>
                 </div>

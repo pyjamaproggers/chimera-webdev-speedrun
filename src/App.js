@@ -8,6 +8,7 @@ import Comp3 from './components/comp3/comp3';
 import Comp4 from './components/comp4/comp4';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Header from './components/header/header';
 
 AOS.init();
 
@@ -17,10 +18,11 @@ function App() {
         <>
             <div className="grandparent">
                 <div className="parent">
-                    <Comp1/>
-                    <Comp2/>
-                    <Comp3/>
-                    <Comp4/>
+                    <Header />
+                    <Comp1 />
+                    <Comp2 />
+                    <Comp3 />
+                    <Comp4 />
                 </div>
             </div>
         </>

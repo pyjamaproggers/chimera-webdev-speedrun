@@ -6,7 +6,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  position: fixed;
+  left: 0px;
   border-style: solid;
   border-color: black;
   border-width: 0px 1px 0px 0px;
@@ -96,10 +97,10 @@
 .navbar-menu-bottomlinks:hover {
   cursor: pointer;
   text-decoration: underline;
-  text-decoration-color: white;
+  text-decoration-color: orange;
 }
 
-.navbar-menu-bottomlinks:hover .menu-navbar-bottomicon1 {
+.navbar-menu-bottomlinks:hover .menu-navbar-bottomicon {
   transition: transform 0.25s;
   transform: rotateZ(45deg);
 }
