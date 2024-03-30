@@ -1,0 +1,41 @@
+.component1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .text-section {
+    margin-bottom: 20px;
+  }
+  
+  .small-text {
+    color: black;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .large-text {
+    font-size: 8rem; 
+    font-weight: bold; 
+    display: block; 
+    color: orange; 
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .aligned-texts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .end-text {
+    margin-left: auto; 
+  }
+  
+  .scroll-hint {
+    font-size: small;
+    color: grey;
+  }
+  

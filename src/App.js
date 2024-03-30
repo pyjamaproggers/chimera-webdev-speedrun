@@ -2,20 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import Grey from './assets/Grey.jpeg'
-import Header from './components/header/header';
+import Comp1 from './components/comp1/comp1';
+import Comp2 from './components/comp2/comp2';
 
 function App() {
 
     return (
         <>
-            <Header />
             <div className="grandparent">
                 <div className="parent">
-                    <img source={Grey} className="child"></img>
-                    <img source={Grey} className="child"></img>
-                    <img source={Grey} className="child"></img>
-                    <img source={Grey} className="child"></img>
-                    <img source={Grey} className="child"></img>
+                    <Comp1/>
+                    <Comp2/>
                 </div>
             </div>
         </>

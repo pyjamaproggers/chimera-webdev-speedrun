@@ -39,7 +39,7 @@
 
 .grandparent {
     width: 100vw;
-    height: 100vh;
+    height: 400vh;
     overflow-x: scroll;
     overflow-y: hidden;
     justify-content: center;
