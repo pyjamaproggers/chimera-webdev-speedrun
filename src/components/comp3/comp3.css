@@ -1,32 +1,41 @@
-.component3{
-    margin: 0 auto;
-    text-align: left;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .content{
-    width: 80%;
-  }
-  
-  .header-inline h2, .header-inline h3 {
-    display: inline; 
-    margin-right: 5px; 
-    font-family: 'DM Serif Display', serif; 
-    font-size: 8em;
-  }
-  
-  .with-lines p {
-    border-bottom: 1px solid #ccc; 
-    padding-bottom: 5px;
-  }
-  
-  .indent {
-    margin-left: 200px;
-  }
-  
-  .arrow {
-    margin-right: 5px;
-  }
-  
+.component3 {
+  margin: 0 auto;
+  text-align: left;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  width: 80%;
+}
+
+.header-inline h2,
+.header-inline h3 {
+  display: inline;
+  margin-right: 5px;
+  font-family: "DM Serif Display", serif;
+  font-size: 8em;
+}
+
+.with-lines p {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.indent {
+  margin-left: 200px;
+}
+
+.arrow {
+  margin-right: 5px;
+}
+
+.comp3-row{
+    /* "to left" / "to right" - affects initial color */
+    transition: background 0.3s;
+}
+
+.comp3-row:hover {
+    background-color: rgb(255, 136, 0, 0.75);
+}
